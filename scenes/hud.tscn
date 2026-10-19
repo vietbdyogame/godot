@@ -1,0 +1,122 @@
+[gd_scene format=3]
+
+[ext_resource type="Script" path="res://scripts/hud.gd" id="1_hud"]
+[ext_resource type="Texture2D" path="res://art/ui/heart_full.png" id="2_heart"]
+
+[node name="HUD" type="CanvasLayer"]
+layer = 10
+script = ExtResource("1_hud")
+
+[node name="Root" type="Control" parent="."]
+texture_filter = 1
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+
+[node name="TopLeft" type="VBoxContainer" parent="Root"]
+layout_mode = 0
+offset_left = 16.0
+offset_top = 14.0
+offset_right = 416.0
+offset_bottom = 124.0
+mouse_filter = 2
+theme_override_constants/separation = 6
+
+[node name="Hearts" type="HBoxContainer" parent="Root/TopLeft"]
+unique_name_in_owner = true
+layout_mode = 2
+mouse_filter = 2
+theme_override_constants/separation = 4
+
+[node name="Heart1" type="TextureRect" parent="Root/TopLeft/Hearts"]
+custom_minimum_size = Vector2(33, 30)
+layout_mode = 2
+texture = ExtResource("2_heart")
+expand_mode = 1
+stretch_mode = 5
+
+[node name="Heart2" type="TextureRect" parent="Root/TopLeft/Hearts"]
+custom_minimum_size = Vector2(33, 30)
+layout_mode = 2
+texture = ExtResource("2_heart")
+expand_mode = 1
+stretch_mode = 5
+
+[node name="Heart3" type="TextureRect" parent="Root/TopLeft/Hearts"]
+custom_minimum_size = Vector2(33, 30)
+layout_mode = 2
+texture = ExtResource("2_heart")
+expand_mode = 1
+stretch_mode = 5
+
+[node name="Heart4" type="TextureRect" parent="Root/TopLeft/Hearts"]
+custom_minimum_size = Vector2(33, 30)
+layout_mode = 2
+texture = ExtResource("2_heart")
+expand_mode = 1
+stretch_mode = 5
+
+[node name="Heart5" type="TextureRect" parent="Root/TopLeft/Hearts"]
+custom_minimum_size = Vector2(33, 30)
+layout_mode = 2
+texture = ExtResource("2_heart")
+expand_mode = 1
+stretch_mode = 5
+
+[node name="WeaponLabel" type="Label" parent="Root/TopLeft"]
+unique_name_in_owner = true
+layout_mode = 2
+theme_override_colors/font_outline_color = Color(0.08, 0.06, 0.1, 1)
+theme_override_constants/outline_size = 6
+theme_override_font_sizes/font_size = 18
+text = "Vũ khí: Kiếm gỗ"
+
+[node name="InfoLabel" type="Label" parent="Root/TopLeft"]
+unique_name_in_owner = true
+layout_mode = 2
+theme_override_colors/font_outline_color = Color(0.08, 0.06, 0.1, 1)
+theme_override_constants/outline_size = 6
+theme_override_font_sizes/font_size = 16
+text = "Hạ gục: 0    Đợt: 0    Còn lại: 8"
+
+[node name="HelpLabel" type="Label" parent="Root"]
+unique_name_in_owner = true
+modulate = Color(1, 1, 1, 0.8)
+layout_mode = 1
+anchors_preset = 2
+anchor_top = 1.0
+anchor_bottom = 1.0
+offset_left = 16.0
+offset_top = -40.0
+offset_right = 916.0
+offset_bottom = -14.0
+grow_vertical = 0
+theme_override_colors/font_outline_color = Color(0.08, 0.06, 0.1, 1)
+theme_override_constants/outline_size = 6
+theme_override_font_sizes/font_size = 14
+text = "WASD/mũi tên: di chuyển   Space/J/chuột trái: tấn công   Q/E/1-6/lăn chuột: đổi vũ khí"
+
+[node name="CenterLabel" type="Label" parent="Root"]
+unique_name_in_owner = true
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -300.0
+offset_top = -60.0
+offset_right = 300.0
+offset_bottom = 60.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_colors/font_outline_color = Color(0.08, 0.06, 0.1, 1)
+theme_override_constants/outline_size = 8
+theme_override_font_sizes/font_size = 32
+text = "Thông báo giữa màn hình"
+horizontal_alignment = 1
+vertical_alignment = 1
